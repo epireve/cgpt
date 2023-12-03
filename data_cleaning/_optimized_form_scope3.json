@@ -1,0 +1,1022 @@
+{
+    "global_lookups": {
+        "dropdown_options": {
+            "businesspersonalvehicletype": [
+                "Passenger Car",
+                "Light-Duty Truck",
+                "Motorcycle"
+            ],
+            "businesspersonalunits": [
+                "miles",
+                "kilometers"
+            ],
+            "businesspersonalspendbaseunits": [
+                "RM"
+            ],
+            "businesstravel_railbusvehicletype": [
+                "Intercity Rail - Northeast Corridor",
+                "Intercity Rail - Other Routes",
+                "Intercity Rail - National Average",
+                "Commuter Rail",
+                "Transit Rail (i.e. Subway, Tram)",
+                "Bus"
+            ],
+            "businesstravel_railbuspassengermilesunits": [
+                "miles",
+                "kilometers"
+            ],
+            "businesstravel_railbusspendbaseunits": [
+                "RM"
+            ],
+            "businesstravel_airflightlength": [
+                "Air Short Haul (< 300 miles)",
+                "Air Medium Haul (>= 300 miles, < 2300 miles)",
+                "Air Long Haul (>= 2300 miles)"
+            ],
+            "businesstravel_airpassengermilesunits": [
+                "miles",
+                "kilometers"
+            ],
+            "businesstravel_airspendbaseunits": [
+                "RM"
+            ],
+            "commutingpersonalvehicletype": [
+                "Passenger Car",
+                "Light-Duty Truck",
+                "Motorcycle"
+            ],
+            "commutingpersonalunits": [
+                "miles",
+                "kilometers"
+            ],
+            "commutingpersonalspendbaseunits": [
+                "RM"
+            ],
+            "commutingpublictransporttype": [
+                "Intercity Rail - Northeast Corridor",
+                "Intercity Rail - Other Routes",
+                "Intercity Rail - National Average",
+                "Commuter Rail",
+                "Transit Rail (i.e. Subway, Tram)",
+                "Bus"
+            ],
+            "commutingpublicunits": [
+                "miles",
+                "kilometers"
+            ],
+            "commutingpublicspendbaseunits": [
+                "RM"
+            ]
+        },
+        "common_fields": {
+            "Date": {
+                "label": "Date",
+                "type": "date",
+                "variable": "businesspersonaldate",
+                "placeholder": "placeholder"
+            },
+            "Source ID": {
+                "label": "Source ID",
+                "type": "text",
+                "variable": "businesspersonalsourceid",
+                "placeholder": "JD-001"
+            }
+        }
+    },
+    "Scope3Activity": {
+        "Business Travel": {
+            "Personal Vehicle, Rental Car or Taxi": {
+                "label": "Personal Vehicle, Rental Car or Taxi",
+                "type": "form",
+                "fields": [
+                    {
+                        "label": "Source Description",
+                        "type": "textarea",
+                        "variable": "businesspersonalsourcedes",
+                        "placeholder": "John Doe 1"
+                    },
+                    {
+                        "label": "Vehicle Type",
+                        "type": "dropdown",
+                        "variable": "businesspersonalvehicletype",
+                        "dropdown_id": "businesspersonalvehicletypeDropdown",
+                        "options": "global_lookup:businesspersonalvehicletype"
+                    },
+                    {
+                        "label": "Vehicle-Miles",
+                        "type": "radio",
+                        "variable": "businesspersonalvehiclemiles",
+                        "options": [
+                            "Vehicle-Miles",
+                            "Spend Base"
+                        ]
+                    },
+                    {
+                        "label": "Units",
+                        "type": "dropdown",
+                        "variable": "businesspersonalunits",
+                        "dropdown_id": "businesspersonalunitsDropdown",
+                        "options": "global_lookup:businesspersonalunits"
+                    },
+                    {
+                        "label": "Spend Base",
+                        "type": "text",
+                        "variable": "businesspersonalspendbase",
+                        "placeholder": "0",
+                        "disabled": "disabled"
+                    },
+                    {
+                        "label": "Spend Base Units",
+                        "type": "dropdown",
+                        "variable": "businesspersonalspendbaseunits",
+                        "dropdown_id": "businesspersonalspendbaseunitsDropdown",
+                        "options": "global_lookup:businesspersonalspendbaseunits"
+                    },
+                    {
+                        "label": "CO2 Emissions (kg)",
+                        "type": "text",
+                        "variable": "businesspersonalco2emissions",
+                        "placeholder": "0",
+                        "disabled": "disabled"
+                    },
+                    {
+                        "label": "CH4 Emissions (g)",
+                        "type": "text",
+                        "variable": "businesspersonalch4emissions",
+                        "placeholder": "0",
+                        "disabled": "disabled"
+                    },
+                    {
+                        "label": "N2O Emissions (g)",
+                        "type": "text",
+                        "variable": "businesspersonaln2oemissions",
+                        "placeholder": "0",
+                        "disabled": "disabled"
+                    }
+                ]
+            },
+            "Rail or Bus": {
+                "label": "Rail or Bus",
+                "type": "form",
+                "fields": [
+                    {
+                        "label": "Source Description",
+                        "type": "textarea",
+                        "variable": "businesstravel_railbussourcedes",
+                        "placeholder": "John Doe 1"
+                    },
+                    {
+                        "label": "Vehicle Type",
+                        "type": "dropdown",
+                        "variable": "businesstravel_railbusvehicletype",
+                        "dropdown_id": "businesstravel_railbusvehicletypeDropdown",
+                        "options": "global_lookup:businesstravel_railbusvehicletype"
+                    },
+                    {
+                        "label": "Passenger-Miles",
+                        "type": "radio",
+                        "variable": "businesstravel_railbuspassengermiles",
+                        "options": [
+                            "Passenger-Miles",
+                            "Spend Base"
+                        ]
+                    },
+                    {
+                        "label": "Units",
+                        "type": "dropdown",
+                        "variable": "businesstravel_railbuspassengermilesunits",
+                        "dropdown_id": "businesstravel_railbuspassengermilesunitsDropdown",
+                        "options": "global_lookup:businesstravel_railbuspassengermilesunits"
+                    },
+                    {
+                        "label": "Spend Base",
+                        "type": "text",
+                        "variable": "businesstravel_railbusspendbase",
+                        "placeholder": "0",
+                        "disabled": "disabled"
+                    },
+                    {
+                        "label": "Spend Base Units",
+                        "type": "dropdown",
+                        "variable": "businesstravel_railbusspendbaseunits",
+                        "dropdown_id": "businesstravel_railbusspendbaseunitsDropdown",
+                        "options": "global_lookup:businesstravel_railbusspendbaseunits"
+                    },
+                    {
+                        "label": "CO2 Emissions (kg)",
+                        "type": "text",
+                        "variable": "businesstravel_railbusco2emissions",
+                        "placeholder": "0",
+                        "disabled": "disabled"
+                    },
+                    {
+                        "label": "CH4 Emissions (g)",
+                        "type": "text",
+                        "variable": "businesstravel_railbusch4emissions",
+                        "placeholder": "0",
+                        "disabled": "disabled"
+                    },
+                    {
+                        "label": "N2O Emissions (g)",
+                        "type": "text",
+                        "variable": "businesstravel_railbusn2oemissions",
+                        "placeholder": "0",
+                        "disabled": "disabled"
+                    }
+                ]
+            },
+            "Air": {
+                "label": "Air",
+                "type": "form",
+                "fields": [
+                    {
+                        "label": "Source Description",
+                        "type": "textarea",
+                        "variable": "businesstravel_airsourcedes",
+                        "placeholder": "John Doe 1"
+                    },
+                    {
+                        "label": "Vehicle Type",
+                        "type": "dropdown",
+                        "variable": "businesstravel_airflightlength",
+                        "dropdown_id": "businesstravel_airflightlengthDropdown",
+                        "options": "global_lookup:businesstravel_airflightlength"
+                    },
+                    {
+                        "label": "Passenger-Miles",
+                        "type": "radio",
+                        "variable": "businesstravel_airpassengermiles",
+                        "options": [
+                            "Passenger-Miles",
+                            "Spend Base"
+                        ]
+                    },
+                    {
+                        "label": "Units",
+                        "type": "dropdown",
+                        "variable": "businesstravel_airpassengermilesunits",
+                        "dropdown_id": "businesstravel_airpassengermilesunitsDropdown",
+                        "options": "global_lookup:businesstravel_airpassengermilesunits"
+                    },
+                    {
+                        "label": "Spend Base",
+                        "type": "text",
+                        "variable": "businesstravel_airspendbase",
+                        "placeholder": "0",
+                        "disabled": "disabled"
+                    },
+                    {
+                        "label": "Spend Base Units",
+                        "type": "dropdown",
+                        "variable": "businesstravel_airspendbaseunits",
+                        "dropdown_id": "businesstravel_airspendbaseunitsDropdown",
+                        "options": "global_lookup:businesstravel_airspendbaseunits"
+                    },
+                    {
+                        "label": "CO2 Emissions (kg)",
+                        "type": "text",
+                        "variable": "businesstravel_airco2emissions",
+                        "placeholder": "0",
+                        "disabled": "disabled"
+                    },
+                    {
+                        "label": "CH4 Emissions (g)",
+                        "type": "text",
+                        "variable": "businesstravel_airch4emissions",
+                        "placeholder": "0",
+                        "disabled": "disabled"
+                    },
+                    {
+                        "label": "N2O Emissions (g)",
+                        "type": "text",
+                        "variable": "businesstravel_airn2oemissions",
+                        "placeholder": "0",
+                        "disabled": "disabled"
+                    }
+                ]
+            }
+        },
+        "Commuting": {
+            "Personal Vehicle": {
+                "label": "Personal Vehicle",
+                "type": "form",
+                "fields": [
+                    {
+                        "label": "Source Description",
+                        "type": "textarea",
+                        "variable": "commutingpersonalsourcedes",
+                        "placeholder": "John Doe 1"
+                    },
+                    {
+                        "label": "Vehicle Type",
+                        "type": "dropdown",
+                        "variable": "commutingpersonalvehicletype",
+                        "dropdown_id": "commutingpersonalvehicletypeDropdown",
+                        "options": "global_lookup:commutingpersonalvehicletype"
+                    },
+                    {
+                        "label": "Vehicle-Miles or Spend Base",
+                        "type": "radio",
+                        "variable": "commutingpersonalvehicleorspend",
+                        "options": [
+                            "Vehicle-Miles",
+                            "Spend Base"
+                        ]
+                    },
+                    {
+                        "label": "Vehicle-Miles",
+                        "type": "text",
+                        "variable": "commutingpersonalvehiclemiles",
+                        "placeholder": "0"
+                    },
+                    {
+                        "label": "Units",
+                        "type": "dropdown",
+                        "variable": "commutingpersonalunits",
+                        "dropdown_id": "commutingpersonalunitsDropdown",
+                        "options": "global_lookup:commutingpersonalunits"
+                    },
+                    {
+                        "label": "Spend Base",
+                        "type": "text",
+                        "variable": "commutingpersonalspendbase",
+                        "placeholder": "0",
+                        "disabled": "disabled"
+                    },
+                    {
+                        "label": "Spend Base Units",
+                        "type": "dropdown",
+                        "variable": "commutingpersonalspendbaseunits",
+                        "dropdown_id": "commutingpersonalspendbaseunitsDropdown",
+                        "options": "global_lookup:commutingpersonalspendbaseunits"
+                    },
+                    {
+                        "label": "CO2 Emissions (kg)",
+                        "type": "text",
+                        "variable": "commutingpersonalco2emissions",
+                        "placeholder": "0",
+                        "disabled": "disabled"
+                    },
+                    {
+                        "label": "CH4 Emissions (g)",
+                        "type": "text",
+                        "variable": "commutingpersonalch4emissions",
+                        "placeholder": "0",
+                        "disabled": "disabled"
+                    },
+                    {
+                        "label": "N2O Emissions (g)",
+                        "type": "text",
+                        "variable": "commutingpersonaln2oemissions",
+                        "placeholder": "0",
+                        "disabled": "disabled"
+                    }
+                ]
+            },
+            "Public Transportation": {
+                "label": "Public Transportation",
+                "type": "form",
+                "fields": [
+                    {
+                        "label": "Source Description",
+                        "type": "textarea",
+                        "variable": "commutingpublicsourcedes",
+                        "placeholder": "John Doe 1"
+                    },
+                    {
+                        "label": "Transport Type",
+                        "type": "dropdown",
+                        "variable": "commutingpublictransporttype",
+                        "dropdown_id": "commutingpublictransporttypeDropdown",
+                        "options": "global_lookup:commutingpublictransporttype"
+                    },
+                    {
+                        "label": "Passenger-Miles or Spend Base",
+                        "type": "radio",
+                        "variable": "commutingpublicpassengerorspend",
+                        "options": [
+                            "Passenger-Miles",
+                            "Spend Base"
+                        ]
+                    },
+                    {
+                        "label": "Passenger-Miles",
+                        "type": "text",
+                        "variable": "commutingpublicpassengermiles",
+                        "placeholder": "0"
+                    },
+                    {
+                        "label": "Units",
+                        "type": "dropdown",
+                        "variable": "commutingpublicunits",
+                        "dropdown_id": "commutingpublicunitsDropdown",
+                        "options": "global_lookup:commutingpublicunits"
+                    },
+                    {
+                        "label": "Spend Base",
+                        "type": "text",
+                        "variable": "commutingpublicspendbase",
+                        "placeholder": "0",
+                        "disabled": "disabled"
+                    },
+                    {
+                        "label": "Spend Base Units",
+                        "type": "dropdown",
+                        "variable": "commutingpublicspendbaseunits",
+                        "dropdown_id": "commutingpublicspendbaseunitsDropdown",
+                        "options": "global_lookup:commutingpublicspendbaseunits"
+                    },
+                    {
+                        "label": "CO2 Emissions (kg)",
+                        "type": "text",
+                        "variable": "commutingpublicco2emissions",
+                        "placeholder": "0",
+                        "disabled": "disabled"
+                    },
+                    {
+                        "label": "CH4 Emissions (g)",
+                        "type": "text",
+                        "variable": "commutingpublicch4emissions",
+                        "placeholder": "0",
+                        "disabled": "disabled"
+                    },
+                    {
+                        "label": "N2O Emissions (g)",
+                        "type": "text",
+                        "variable": "commutingpublicn2oemissions",
+                        "placeholder": "0",
+                        "disabled": "disabled"
+                    }
+                ]
+            }
+        },
+        "Upstream Transport & Distance": {
+            "Product Transport by Vehicle-Miles": {
+                "Date": {
+                    "type": "date",
+                    "placeholder": "YYYY-MM-DD"
+                },
+                "Source ID": {
+                    "type": "text",
+                    "placeholder": "Bldg-012"
+                },
+                "Source Description": {
+                    "type": "textarea",
+                    "placeholder": "East Power Plant Finished Goods"
+                },
+                "Vehicle Type": {
+                    "type": "dropdown",
+                    "dropdown_id": "upstreamvehiclemilesvehicletypeDropdown",
+                    "options": [
+                        {
+                            "label": "Medium- and Heavy-Duty Truck",
+                            "variable": "Medium- and Heavy-Duty Truck"
+                        },
+                        {
+                            "label": "Light-Duty Truck",
+                            "variable": "Light-Duty Truck"
+                        },
+                        {
+                            "label": "Passenger Car",
+                            "variable": "Passenger Car"
+                        }
+                    ]
+                },
+                "Vehicle-Miles": {
+                    "type": "text",
+                    "placeholder": "0"
+                },
+                "Units": {
+                    "type": "dropdown",
+                    "dropdown_id": "upstreamvehicleunitsDropdown",
+                    "options": [
+                        {
+                            "label": "miles",
+                            "variable": "miles"
+                        },
+                        {
+                            "label": "kilometers",
+                            "variable": "kilometers"
+                        }
+                    ]
+                },
+                "Spend Base": {
+                    "type": "text",
+                    "placeholder": "0",
+                    "disabled": true
+                },
+                "Spend Base Units": {
+                    "type": "dropdown",
+                    "dropdown_id": "upstreamvehiclemilesspendbaseunitsDropdown",
+                    "options": [
+                        {
+                            "label": "RM",
+                            "variable": "RM"
+                        }
+                    ]
+                },
+                "CO2 Emissions (kg)": {
+                    "type": "text",
+                    "placeholder": "0",
+                    "disabled": true
+                },
+                "CH4 Emissions (g)": {
+                    "type": "text",
+                    "placeholder": "0",
+                    "disabled": true
+                },
+                "N2O Emissions (g)": {
+                    "type": "text",
+                    "placeholder": "0",
+                    "disabled": true
+                }
+            },
+            "Product Transport by Ton-Miles": {
+                "Date": {
+                    "type": "date",
+                    "placeholder": "YYYY-MM-DD"
+                },
+                "Source ID": {
+                    "type": "text",
+                    "placeholder": "Bldg-012"
+                },
+                "Source Description": {
+                    "type": "textarea",
+                    "placeholder": "East Power Plant Finished Goods"
+                },
+                "Vehicle Type": {
+                    "type": "dropdown",
+                    "dropdown_id": "upstreamtonmilesvehicletypeDropdown",
+                    "options": [
+                        {
+                            "label": "Medium- and Heavy-Duty Truck",
+                            "variable": "Medium- and Heavy-Duty Truck"
+                        },
+                        {
+                            "label": "Rail",
+                            "variable": "Rail"
+                        },
+                        {
+                            "label": "Waterborne Craft",
+                            "variable": "Waterborne Craft"
+                        },
+                        {
+                            "label": "Aircraft",
+                            "variable": "Aircraft"
+                        }
+                    ]
+                },
+                "Short Ton-Miles": {
+                    "type": "text",
+                    "placeholder": "0"
+                },
+                "Units": {
+                    "type": "dropdown",
+                    "dropdown_id": "upstreamtonunitsDropdown",
+                    "options": [
+                        {
+                            "label": "miles",
+                            "variable": "miles"
+                        },
+                        {
+                            "label": "kilometers",
+                            "variable": "kilometers"
+                        }
+                    ]
+                },
+                "Spend Base": {
+                    "type": "text",
+                    "placeholder": "0",
+                    "disabled": true
+                },
+                "Spend Base Units": {
+                    "type": "dropdown",
+                    "dropdown_id": "upstreamtonmilesspendbaseunitsDropdown",
+                    "options": [
+                        {
+                            "label": "RM",
+                            "variable": "RM"
+                        }
+                    ]
+                },
+                "CO2 Emissions (kg)": {
+                    "type": "text",
+                    "placeholder": "0",
+                    "disabled": true
+                },
+                "CH4 Emissions (g)": {
+                    "type": "text",
+                    "placeholder": "0",
+                    "disabled": true
+                },
+                "N2O Emissions (g)": {
+                    "type": "text",
+                    "placeholder": "0",
+                    "disabled": true
+                }
+            }
+        },
+        "Waste": {
+            "Date": {
+                "type": "date",
+                "placeholder": ""
+            },
+            "Source ID": {
+                "type": "text",
+                "placeholder": "Bldg-012"
+            },
+            "Source Description": {
+                "type": "textarea",
+                "rows": 3,
+                "placeholder": "East Power Plant Finished Goods"
+            },
+            "Waste Material": {
+                "type": "dropdown",
+                "options": [
+                    {
+                        "label": "Aluminium Cans",
+                        "variable": "aluminium_cans",
+                        "dropdown_id": "wasteMaterialDropdown"
+                    },
+                    {
+                        "label": "Aluminum Ingot",
+                        "variable": "aluminum_ingot",
+                        "dropdown_id": "wasteMaterialDropdown"
+                    },
+                    {
+                        "label": "Steel Cans",
+                        "variable": "steel_cans",
+                        "dropdown_id": "wasteMaterialDropdown"
+                    },
+                    {
+                        "label": "Copper Wire",
+                        "variable": "copper_wire",
+                        "dropdown_id": "wasteMaterialDropdown"
+                    },
+                    {
+                        "label": "Glass",
+                        "variable": "glass",
+                        "dropdown_id": "wasteMaterialDropdown"
+                    },
+                    {
+                        "label": "HDPE",
+                        "variable": "hdpe",
+                        "dropdown_id": "wasteMaterialDropdown"
+                    },
+                    {
+                        "label": "LDPE",
+                        "variable": "ldpe",
+                        "dropdown_id": "wasteMaterialDropdown"
+                    },
+                    {
+                        "label": "PET",
+                        "variable": "pet",
+                        "dropdown_id": "wasteMaterialDropdown"
+                    },
+                    {
+                        "label": "LLDPE",
+                        "variable": "lldpe",
+                        "dropdown_id": "wasteMaterialDropdown"
+                    },
+                    {
+                        "label": "PP",
+                        "variable": "pp",
+                        "dropdown_id": "wasteMaterialDropdown"
+                    },
+                    {
+                        "label": "PS",
+                        "variable": "ps",
+                        "dropdown_id": "wasteMaterialDropdown"
+                    },
+                    {
+                        "label": "PVC",
+                        "variable": "pvc",
+                        "dropdown_id": "wasteMaterialDropdown"
+                    },
+                    {
+                        "label": "PLA",
+                        "variable": "pla",
+                        "dropdown_id": "wasteMaterialDropdown"
+                    },
+                    {
+                        "label": "Corrugated Containers",
+                        "variable": "corrugated_containers",
+                        "dropdown_id": "wasteMaterialDropdown"
+                    },
+                    {
+                        "label": "Magazines and Third class mail",
+                        "variable": "magazines_third_class_mail",
+                        "dropdown_id": "wasteMaterialDropdown"
+                    },
+                    {
+                        "label": "Newspaper",
+                        "variable": "newspaper",
+                        "dropdown_id": "wasteMaterialDropdown"
+                    },
+                    {
+                        "label": "Office Paper",
+                        "variable": "office_paper",
+                        "dropdown_id": "wasteMaterialDropdown"
+                    },
+                    {
+                        "label": "Phonebooks",
+                        "variable": "phonebooks",
+                        "dropdown_id": "wasteMaterialDropdown"
+                    },
+                    {
+                        "label": "Textbooks",
+                        "variable": "textbooks",
+                        "dropdown_id": "wasteMaterialDropdown"
+                    },
+                    {
+                        "label": "Dimensional Lumber",
+                        "variable": "dimensional_lumber",
+                        "dropdown_id": "wasteMaterialDropdown"
+                    },
+                    {
+                        "label": "Medium density Fiberboard",
+                        "variable": "medium_density_fiberboard",
+                        "dropdown_id": "wasteMaterialDropdown"
+                    },
+                    {
+                        "label": "Food Waste non meat",
+                        "variable": "food_waste_non_meat",
+                        "dropdown_id": "wasteMaterialDropdown"
+                    },
+                    {
+                        "label": "Food Waste meat only",
+                        "variable": "food_waste_meat_only",
+                        "dropdown_id": "wasteMaterialDropdown"
+                    },
+                    {
+                        "label": "Beef",
+                        "variable": "beef",
+                        "dropdown_id": "wasteMaterialDropdown"
+                    },
+                    {
+                        "label": "Poultry",
+                        "variable": "poultry",
+                        "dropdown_id": "wasteMaterialDropdown"
+                    },
+                    {
+                        "label": "Grains",
+                        "variable": "grains",
+                        "dropdown_id": "wasteMaterialDropdown"
+                    },
+                    {
+                        "label": "Bread",
+                        "variable": "bread",
+                        "dropdown_id": "wasteMaterialDropdown"
+                    },
+                    {
+                        "label": "Fruits and Vegetables",
+                        "variable": "fruits_and_vegetables",
+                        "dropdown_id": "wasteMaterialDropdown"
+                    },
+                    {
+                        "label": "Dairy Products",
+                        "variable": "dairy_products",
+                        "dropdown_id": "wasteMaterialDropdown"
+                    },
+                    {
+                        "label": "Yard Trimmings",
+                        "variable": "yard_trimmings",
+                        "dropdown_id": "wasteMaterialDropdown"
+                    },
+                    {
+                        "label": "Grass",
+                        "variable": "grass",
+                        "dropdown_id": "wasteMaterialDropdown"
+                    },
+                    {
+                        "label": "Leaves",
+                        "variable": "leaves",
+                        "dropdown_id": "wasteMaterialDropdown"
+                    },
+                    {
+                        "label": "Branches",
+                        "variable": "branches",
+                        "dropdown_id": "wasteMaterialDropdown"
+                    },
+                    {
+                        "label": "Mixed Paper general",
+                        "variable": "mixed_paper_general",
+                        "dropdown_id": "wasteMaterialDropdown"
+                    },
+                    {
+                        "label": "Mixed Paper primarily residential",
+                        "variable": "mixed_paper_primarily_residential",
+                        "dropdown_id": "wasteMaterialDropdown"
+                    },
+                    {
+                        "label": "Mixed Paper primarily from offices",
+                        "variable": "mixed_paper_primarily_offices",
+                        "dropdown_id": "wasteMaterialDropdown"
+                    },
+                    {
+                        "label": "Mixed Metals",
+                        "variable": "mixed_metals",
+                        "dropdown_id": "wasteMaterialDropdown"
+                    },
+                    {
+                        "label": "Mixed Plastics",
+                        "variable": "mixed_plastics",
+                        "dropdown_id": "wasteMaterialDropdown"
+                    },
+                    {
+                        "label": "Mixed Recyclables",
+                        "variable": "mixed_recyclables",
+                        "dropdown_id": "wasteMaterialDropdown"
+                    },
+                    {
+                        "label": "Food Waste",
+                        "variable": "food_waste",
+                        "dropdown_id": "wasteMaterialDropdown"
+                    },
+                    {
+                        "label": "Mixed Organics",
+                        "variable": "mixed_organics",
+                        "dropdown_id": "wasteMaterialDropdown"
+                    },
+                    {
+                        "label": "Mixed MSW municipal solid waste",
+                        "variable": "mixed_msw_solid_waste",
+                        "dropdown_id": "wasteMaterialDropdown"
+                    },
+                    {
+                        "label": "Carpet",
+                        "variable": "carpet",
+                        "dropdown_id": "wasteMaterialDropdown"
+                    },
+                    {
+                        "label": "Desktop CPUs",
+                        "variable": "desktop_cpus",
+                        "dropdown_id": "wasteMaterialDropdown"
+                    },
+                    {
+                        "label": "Portable Electronic Devices",
+                        "variable": "portable_electronic_devices",
+                        "dropdown_id": "wasteMaterialDropdown"
+                    },
+                    {
+                        "label": "Flat panel Displays",
+                        "variable": "flat_panel_displays",
+                        "dropdown_id": "wasteMaterialDropdown"
+                    },
+                    {
+                        "label": "CRT Displays",
+                        "variable": "crt_displays",
+                        "dropdown_id": "wasteMaterialDropdown"
+                    },
+                    {
+                        "label": "Electronic Peripherals",
+                        "variable": "electronic_peripherals",
+                        "dropdown_id": "wasteMaterialDropdown"
+                    },
+                    {
+                        "label": "Hard copy Devices",
+                        "variable": "hard_copy_devices",
+                        "dropdown_id": "wasteMaterialDropdown"
+                    },
+                    {
+                        "label": "Mixed Electronics",
+                        "variable": "mixed_electronics",
+                        "dropdown_id": "wasteMaterialDropdown"
+                    },
+                    {
+                        "label": "Clay Bricks",
+                        "variable": "clay_bricks",
+                        "dropdown_id": "wasteMaterialDropdown"
+                    },
+                    {
+                        "label": "Concrete",
+                        "variable": "concrete",
+                        "dropdown_id": "wasteMaterialDropdown"
+                    },
+                    {
+                        "label": "Fly Ash",
+                        "variable": "fly_ash",
+                        "dropdown_id": "wasteMaterialDropdown"
+                    },
+                    {
+                        "label": "Tires",
+                        "variable": "tires",
+                        "dropdown_id": "wasteMaterialDropdown"
+                    },
+                    {
+                        "label": "Asphalt Concrete",
+                        "variable": "asphalt_concrete",
+                        "dropdown_id": "wasteMaterialDropdown"
+                    },
+                    {
+                        "label": "Asphalt Shingles",
+                        "variable": "asphalt_shingles",
+                        "dropdown_id": "wasteMaterialDropdown"
+                    },
+                    {
+                        "label": "Drywall",
+                        "variable": "drywall",
+                        "dropdown_id": "wasteMaterialDropdown"
+                    },
+                    {
+                        "label": "Fiberglass Insulation",
+                        "variable": "fiberglass_insulation",
+                        "dropdown_id": "wasteMaterialDropdown"
+                    },
+                    {
+                        "label": "Vinyl Flooring",
+                        "variable": "vinyl_flooring",
+                        "dropdown_id": "wasteMaterialDropdown"
+                    },
+                    {
+                        "label": "Wood Flooring",
+                        "variable": "wood_flooring",
+                        "dropdown_id": "wasteMaterialDropdown"
+                    },
+                    {
+                        "label": "Rail",
+                        "variable": "rail",
+                        "dropdown_id": "wasteMaterialDropdown"
+                    }
+                ]
+            },
+            "Disposal Method": {
+                "type": "dropdown",
+                "options": [
+                    {
+                        "label": "Recycled",
+                        "variable": "recycled",
+                        "dropdown_id": "wastedisposalmethodDropdown"
+                    },
+                    {
+                        "label": "Landfilled",
+                        "variable": "landfilled",
+                        "dropdown_id": "wastedisposalmethodDropdown"
+                    },
+                    {
+                        "label": "Combusted",
+                        "variable": "combusted",
+                        "dropdown_id": "wastedisposalmethodDropdown"
+                    },
+                    {
+                        "label": "Composted",
+                        "variable": "composted",
+                        "dropdown_id": "wastedisposalmethodDropdown",
+                        "hidden": true
+                    },
+                    {
+                        "label": "Anaerobically Digested (Dry Digestate with Curing)",
+                        "variable": "dry_digestate",
+                        "dropdown_id": "wastedisposalmethodDropdown",
+                        "hidden": true
+                    },
+                    {
+                        "label": "Anaerobically Digested (Wet Digestate with Curing)",
+                        "variable": "wet_digestate",
+                        "dropdown_id": "wastedisposalmethodDropdown",
+                        "hidden": true
+                    }
+                ]
+            },
+            "Weight": {
+                "type": "text",
+                "placeholder": "1000"
+            },
+            "Units": {
+                "type": "dropdown",
+                "options": [
+                    {
+                        "label": "kilogram (kg)",
+                        "variable": "kg",
+                        "dropdown_id": "wasteweightunitsDropdown"
+                    },
+                    {
+                        "label": "gram (g)",
+                        "variable": "g",
+                        "dropdown_id": "wasteweightunitsDropdown"
+                    },
+                    {
+                        "label": "metric ton",
+                        "variable": "metric_ton",
+                        "dropdown_id": "wasteweightunitsDropdown"
+                    },
+                    {
+                        "label": "pounds (lb)",
+                        "variable": "pounds",
+                        "dropdown_id": "wasteweightunitsDropdown"
+                    },
+                    {
+                        "label": "short ton",
+                        "variable": "short_ton",
+                        "dropdown_id": "wasteweightunitsDropdown"
+                    }
+                ]
+            },
+            "CO2 Emissions (kg)": {
+                "type": "text",
+                "placeholder": "0",
+                "disabled": true
+            }
+        }
+    }
+}
