@@ -1,0 +1,199 @@
+{
+    "Scope2Activity": {
+      "Electricity": {
+        "Date": {
+          "type": "date", 
+          "placeholder": "YYYY-MM-DD"
+        },
+        "Source ID": {
+          "type": "text",
+          "placeholder": "Bldg-012"  
+        },
+        "Source Description": {
+          "type": "textarea",
+          "rows": 3,
+          "placeholder": "East Power Plant"
+        },
+        "Facility": {
+          "type": "dropdown",
+          "options": [
+            {"id": "", "label": "Select Facility"},
+            {"id": "GCC", "label": "GCC"}
+          ]
+        },
+        "Region": {
+          "type": "dropdown",
+          "options": [
+            {"id": "", "label": "Select Region"},
+            {"id": "Central USA", "label": "Central USA"},
+            {"id": "Eastern USA", "label": "Eastern USA"}, 
+            {"id": "Malaysia", "label": "Malaysia"},
+            {"id": "Singapore", "label": "Singapore"},
+            {"id": "Southern USA", "label": "Southern USA"},
+            {"id": "Western USA", "label": "Western USA"}
+          ]
+        },
+        "eGRID Subregion": {
+          "type": "dropdown",
+          "options": []  
+        },
+        "Electricity Purchased": {
+          "type": "text",
+          "placeholder": "0"
+        },
+        "Units (Electricity Purchased)": { 
+          "type": "dropdown",
+          "options": [
+            {"id": "kWh", "label": "kWh"}
+          ]
+        },
+        "Spend Base": {
+          "type": "text",
+          "placeholder": "0",
+          "disabled": true
+        },
+        "Units (Spend Base)": {
+          "type": "dropdown",
+          "options": [
+            {"id": "RM", "label": "RM"}
+          ]
+        },
+        "CO2": {
+          "type": "text",
+          "placeholder": "0",
+          "disabled": true
+        },
+        "CH4": {
+          "type": "text", 
+          "placeholder": "0",
+          "disabled": true
+        },
+        "N2O": {
+          "type": "text",
+          "placeholder": "0", 
+          "disabled": true  
+        }
+      },
+      "Steam": {
+        "Date": {
+          "type": "date", 
+          "placeholder": "YYYY-MM-DD"
+        },
+        "Source ID": {
+          "type": "text",
+          "placeholder": "Bldg-012"
+        },
+        "Source Description": {
+          "type": "textarea", 
+          "rows": 3,
+          "placeholder": "Steam-Blr Room"
+        },
+        "Facility": {
+          "type": "dropdown",
+          "options": [
+            {"id": "", "label": "Select Facility"}
+          ]
+        },
+        "Fuel Type": {
+          "type": "dropdown",
+          "options": [
+            {"id": "Natural Gas", "label": "Natural Gas"},
+            {"id": "Distillate Fuel Oil No. 2", "label": "Distillate Fuel Oil No. 2"},
+            {"id": "Residual Fuel Oil No. 6", "label": "Residual Fuel Oil No. 6"},
+            {"id": "Kerosene", "label": "Kerosene"}, 
+            {"id": "Liquefied Petroleum Gases (LPG)", "label": "Liquefied Petroleum Gases (LPG)"},
+            {"id": "Anthracite Coal", "label": "Anthracite Coal"},
+            {"id": "Bituminous Coal", "label": "Bituminous Coal"},
+            {"id": "Sub-bituminous Coal", "label": "Sub-bituminous Coal"},
+            {"id": "Lignite Coal", "label": "Lignite Coal"},
+            {"id": "Mixed (Electric Power Sector)", "label": "Mixed (Electric Power Sector)"}, 
+            {"id": "Coal Coke", "label": "Coal Coke"},
+            {"id": "Wood and Wood Residuals", "label": "Wood and Wood Residuals"},
+            {"id": "Landfill Gas", "label": "Landfill Gas"}
+          ]
+        },
+        "Boiler Efficiency": {
+          "type": "text",  
+          "placeholder": "89"
+        },
+        "Units (Boiler Efficiency)": {
+          "type": "dropdown",
+          "options": [
+            {"id": "%", "label": "%"}    
+          ]
+        },
+        "Steam Purchased": {
+          "type": "text",
+          "placeholder": "5000"  
+        },
+        "Units (Steam Purchased)": {
+          "type": "dropdown",
+          "options": [
+            {"id": "mmBtu", "label": "mmBtu"}
+          ]
+        },
+        "Location-Based Emission Factor": {
+          "CO2": {
+            "type": "text",
+            "placeholder": "200000"
+          },
+          "CH4": {
+            "type": "text",
+            "placeholder": "200000"
+          },
+          "N2O": {
+            "type": "text",  
+            "placeholder": "200000"
+          }
+        },
+        "Location-Based Emissions": {
+          "CO2": {
+            "type": "text",
+            "placeholder": "0",
+            "disabled": true  
+          },
+          "CH4": {
+            "type": "text",
+            "placeholder": "0",
+            "disabled": true
+          },
+          "N2O": {
+            "type": "text",
+            "placeholder": "0",
+            "disabled": true
+          }
+        },
+        "Market-Based Emission Factor": {
+          "CO2": {
+            "type": "text",
+            "placeholder": "200000" 
+          },
+          "CH4": {
+            "type": "text",
+            "placeholder": "200000"
+          },
+          "N2O": {
+            "type": "text", 
+            "placeholder": "200000"
+          }
+        },
+        "Market-Based Emissions": {
+          "CO2": {
+            "type": "text",
+            "placeholder": "0",
+            "disabled": true
+          },
+          "CH4": {
+            "type": "text",
+            "placeholder": "0", 
+            "disabled": true
+          },
+          "N2O": {
+            "type": "text",
+            "placeholder": "0",
+            "disabled": true
+          } 
+        }
+      }
+    }
+  }
